@@ -25,7 +25,16 @@ const currentPath = Astro.url.pathname;
         </ul>
       </li>
       <li><a href="/about" class={currentPath === '/about' ? 'active' : ''}>About Us</a></li>
-      <li><a href="/service-areas" class={currentPath === '/service-areas' ? 'active' : ''}>Service Areas</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Service Areas</a>
+        <ul class="dropdown-menu">
+          <li><a href="/dog-walking-lake-mary-fl">Lake Mary</a></li>
+          <li><a href="/dog-walking-longwood-fl">Longwood</a></li>
+          <li><a href="/dog-walking-heathrow-fl">Heathrow</a></li>
+          <li><a href="/dog-walking-wekiva-springs-fl">Wekiva Springs</a></li>
+          <li><a href="/service-areas">View All Areas</a></li>
+        </ul>
+      </li>
       <li><a href="/pricing" class={currentPath === '/pricing' ? 'active' : ''}>Pricing</a></li>
       <li><a href="/reviews" class={currentPath === '/reviews' ? 'active' : ''}>Reviews</a></li>
       <li><a href="/faq" class={currentPath === '/faq' ? 'active' : ''}>FAQ</a></li>
