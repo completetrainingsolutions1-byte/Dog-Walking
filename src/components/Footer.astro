@@ -1,0 +1,144 @@
+---
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-section">
+        <h3>Pet Walking Pro's</h3>
+        <p>Lake Mary's trusted dog walking and pet care service. Bonded, insured, and dedicated to keeping your furry friends happy and healthy.</p>
+        <div class="footer-contact">
+          <p><strong>Phone:</strong> [PHONE]</p>
+          <p><strong>Email:</strong> [EMAIL]</p>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/service-areas">Service Areas</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="/services/dog-walking">Dog Walking Services</a></li>
+          <li><a href="/services/pet-sitting">Pet Sitting Services</a></li>
+          <li><a href="/services/specialized">Specialized Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Service Areas -->
+      <div class="footer-section">
+        <h4>Service Areas</h4>
+        <ul>
+          <li>Lake Mary, FL</li>
+          <li>Heathrow, FL</li>
+          <li>Longwood, FL</li>
+          <li>Seminole County, FL</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary" style="margin-top: 1rem;">Book Now</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} Pet Walking Pro's. All rights reserved.</p>
+      <p class="footer-credentials">Licensed, Bonded & Insured | Serving Seminole County, FL</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+    color: white;
+    padding: 60px 0 20px;
+    margin-top: 80px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-section h3 {
+    color: var(--primary-orange);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section h4 {
+    color: var(--primary-orange-light);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section p {
+    color: var(--gray-300);
+    line-height: 1.6;
+  }
+
+  .footer-contact {
+    margin-top: 1rem;
+  }
+
+  .footer-contact p {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section ul li a {
+    color: var(--gray-300);
+    transition: color 0.3s ease;
+  }
+
+  .footer-section ul li a:hover {
+    color: var(--primary-orange-light);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--gray-700);
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: var(--gray-400);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-credentials {
+    font-weight: 600;
+    color: var(--primary-orange-light);
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 40px 0 20px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

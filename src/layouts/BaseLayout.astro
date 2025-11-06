@@ -1,0 +1,203 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonicalURL?: string;
+}
+
+const { title, description, keywords, canonicalURL } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  {keywords && <meta name="keywords" content={keywords}>}
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Pet Walking Pro's">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:site_name" content="Pet Walking Pro's">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+
+  {canonicalURL && <link rel="canonical" href={canonicalURL}>}
+
+  <title>{title}</title>
+
+  <style is:global>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-blue: #2B6CB0;
+      --primary-blue-light: #3182CE;
+      --primary-orange: #ED8936;
+      --primary-orange-light: #F6AD55;
+      --gray-50: #F7FAFC;
+      --gray-100: #EDF2F7;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E0;
+      --gray-600: #718096;
+      --gray-700: #4A5568;
+      --gray-800: #2D3748;
+      --gray-900: #1A202C;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--gray-800);
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--gray-900);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--primary-blue-light);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-orange);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-orange-light);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(237, 137, 54, 0.3);
+    }
+
+    .btn-secondary {
+      background-color: var(--primary-blue);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary-blue-light);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary-blue);
+      border: 2px solid var(--primary-blue);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-blue);
+      color: white;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-alt {
+      background-color: var(--gray-50);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .image-placeholder {
+      background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-300) 100%);
+      border-radius: 8px;
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--gray-600);
+      font-style: italic;
+      border: 2px dashed var(--gray-300);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .section {
+        padding: 40px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <Navigation />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</body>
+</html>
