@@ -36,7 +36,6 @@ const currentPath = Astro.url.pathname;
           <li><a href="/service-areas">View All Areas</a></li>
         </ul>
       </li>
-      <li><a href="/pricing" class={currentPath === '/pricing' ? 'active' : ''}>Pricing</a></li>
       <li><a href="/reviews" class={currentPath === '/reviews' ? 'active' : ''}>Reviews</a></li>
       <li><a href="/blog" class={currentPath.startsWith('/blog') ? 'active' : ''}>Blog</a></li>
       <li><a href="/faq" class={currentPath === '/faq' ? 'active' : ''}>FAQ</a></li>
