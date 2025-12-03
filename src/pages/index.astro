@@ -24,7 +24,7 @@ const keywords = "Lake Mary dog walker, dog walking Lake Mary FL, pet walking La
         </div>
       </div>
       <div class="hero-image">
-        <div class="image-placeholder">[Image: Happy dog being walked by professional walker in Lake Mary park]</div>
+        <img src="/Image Happy dog being walked by professional walker in Lake Mary park.jpg" alt="Happy dog being walked by professional walker in Lake Mary park" />
       </div>
     </div>
   </section>
@@ -240,6 +240,19 @@ const keywords = "Lake Mary dog walker, dog walking Lake Mary FL, pet walking La
   .hero .btn-outline:hover {
     background-color: white;
     color: var(--primary-blue);
+  }
+
+  .hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   }
 
   .section-intro {
