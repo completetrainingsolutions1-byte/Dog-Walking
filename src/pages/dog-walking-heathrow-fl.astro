@@ -29,7 +29,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p>Our bonded and insured dog walkers deliver the level of service and professionalism Heathrow residents expect. We're punctual, detail-oriented, and committed to providing premium care that gives you complete peace of mind while you focus on your career and family.</p>
         </div>
         <div class="intro-image">
-          <p class="image-placeholder">[Image: Happy dog being walked in Heathrow neighborhood]</p>
+          <img src="/Image Happy dog being walked in Heathrow neighborhood.jpg" alt="Happy dog being walked in Heathrow neighborhood" />
         </div>
       </div>
     </div>
@@ -240,6 +240,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 1.5rem;
     line-height: 1.8;
     color: #4a5568;
+  }
+
+  .intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .image-placeholder {
