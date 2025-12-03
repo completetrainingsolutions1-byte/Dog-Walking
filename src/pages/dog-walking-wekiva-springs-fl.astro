@@ -29,7 +29,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p>Our bonded and insured dog walkers embrace the Wekiva Springs lifestyle. We understand that pets in this area thrive on nature, fresh air, and adventure. Whether your dog lives near Kelly Park, Rock Springs, or the Wekiva Island area, we provide walks that honor the natural, active spirit of this unique community.</p>
         </div>
         <div class="intro-image">
-          <p class="image-placeholder">[Image: Happy dog being walked in Wekiva Springs neighborhood]</p>
+          <img src="/Image Happy dog being walked in Wekiva Springs neighborhood.jpg" alt="Happy dog being walked in Wekiva Springs neighborhood" />
         </div>
       </div>
     </div>
@@ -240,6 +240,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 1.5rem;
     line-height: 1.8;
     color: #4a5568;
+  }
+
+  .intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .image-placeholder {
